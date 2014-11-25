@@ -15,7 +15,7 @@ $(document).ready(function(){
     Parse.initialize(parseAPPID, parseJSID);
     
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
-    /*var htmlBuilder = [];
+    var htmlBuilder = [];
     
     getList(UNCBookShare);
     $("#addBook").on("submit", function(e){
@@ -74,7 +74,7 @@ function getList(UNCBookShare){
     });
     
     
-}*/
+}
 
 $(document).on("pageshow", "#home", function(e, ui) {
   $.mobile.loading("show");

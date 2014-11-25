@@ -30,6 +30,7 @@ function setUp() {
     console.log("Submit");
     
     var data={};
+    data.email=$("#email").val();
     data.classTitle=$("#title").val();
     data.name=$("#name").val();
     data.title=$("#classNumber").val();
@@ -67,6 +68,7 @@ function emailStuff(){
         subject: null,
         body:    null,
 });
+        $("#email").html(htmlBuilder);
     }
 );
 }
@@ -85,7 +87,8 @@ function getList(UNCBookShare){
             '<td>'+ '<p>'+ results[index].attributes.title +'</p>' + '</td>'+
             '<td>'+ '<p>'+ results[index].attributes.department +'</p>' +'</td>'+
             '<td>'+ '<p>'+ results[index].attributes.classNumber +'</p>'+'</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'
+            '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'+
+            '<td>' + '<p>'+results[index].attributes.email + '</p>'+'</td>'
             });
             
             $("#books").html(htmlBuilder);

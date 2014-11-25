@@ -62,7 +62,7 @@ function emailStuff(){
     function (isAvailable) {
         // alert('Service is not available') unless isAvailable;
         window.plugin.email.open({
-        to:      null,
+        to:      ["#email"],
         cc:      null,
         bcc:     null,
         subject: null,

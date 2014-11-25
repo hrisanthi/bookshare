@@ -5,7 +5,7 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    setUp();
+    //setUp();
 });
 
 var htmlBuilder;
@@ -53,18 +53,17 @@ function setUp() {
     
 }
 
-
 function emailStuff(){
     
     window.plugin.email.isServiceAvailable(
     function (isAvailable) {
         // alert('Service is not available') unless isAvailable;
         window.plugin.email.open({
-    to:      null,
-    cc:      null,
-    bcc:     null,
-    subject: null,
-    body:    null,
+        to:      null,
+        cc:      null,
+        bcc:     null,
+        subject: null,
+        body:    null,
 });
     }
 );

@@ -5,14 +5,16 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    //setUp();
+    setUp();
+    emailStuff();
+    
 });
 
 var htmlBuilder;
 
 function setUp() {
     
-    emailStuff();
+    
     var parseAPPID="zK8NuhYO40bSVrNzFs8yEJjyvu10JqISWX4ExHQg";
     var parseJSID="8PIiPYg1TWQASIr4Onnz1ofBRqJ5rPFURdPO5aEI"
     

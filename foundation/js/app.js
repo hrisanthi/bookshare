@@ -1,8 +1,8 @@
-//document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 
-//function onDeviceReady() {
+function onDeviceReady() {
     //code
-//}
+}
 
 
 var htmlBuilder;
@@ -24,11 +24,11 @@ $(document).ready(function(){
     console.log("Submit");
     
     var data={};
+    data.classTitle=$("#title").val();
     data.name=$("#name").val();
-    data.title=$("#title").val();
-    data.department=$("#department").val();
-    data.classNumber=$("#classNumber").val();
-    data.classTitle=$("#className").val();
+    data.title=$("#classNumber").val();
+    data.department=$("#classTitle").val();
+    data.classNumber=$("#departmant").val();
 
     
     var book = new UNCBookShare();
@@ -63,7 +63,6 @@ function getList(UNCBookShare){
             '<td>'+ '<p>'+ results[index].attributes.department +'</p>' +'</td>'+
             '<td>'+ '<p>'+ results[index].attributes.classNumber +'</p>'+'</td>'+
             '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.price + '</p>'+'</td>';
 });
             $("#books").html(htmlBuilder);
         },

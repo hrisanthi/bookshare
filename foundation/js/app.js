@@ -1,8 +1,8 @@
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
 
-function onDeviceReady() {
+//function onDeviceReady() {
     //code
-}
+//}
 
 
 var htmlBuilder;

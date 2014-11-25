@@ -68,7 +68,6 @@ function emailStuff(){
         subject: null,
         body:    null,
 });
-        $("#email").html(htmlBuilder);
     }
 );
 }

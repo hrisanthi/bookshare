@@ -1,0 +1,25 @@
+License:
+
+This software is copyrighted by the author, Calin Uioreanu (hereafter, Author) , php9.com 2001-2003. By software we mean the package that comes with this license. You (hereafter, Licensee) are not allowed to use this software in a production environment, for commercial purposes except if the software comes attached to a written approval of the author. Any usage of this software must be made with previous author notification and written approval. Any usage that does not comply to the written agreement is prohibited and represents criminal activity. You are strictly forbidden to sell or re-sell the package as a whole or parts of it. The copyright covers the software contained in this package, splitted into modules as standalone software and also as complete package, and also the techniques used, the coding patterns contained. Everything that includes this package was created personally by the author, and you are strictly forbidden to ignore the intellectual property of this product.
+
+You may download the software and install it for a testing and evaluation period that is at the sole discretion of the Author. Therefore this license can cease anytime. Beginning on the first day after installation of the Software, Licensee is required to acquire a license for future usage of the Software. A licence can be acquired by payment of a licence fee or by obtaining a written agreement with the author. Students or PHP learning classes may apply for an royalty-free licence for educational usage. Licenses are distributed by the Author. Please send an email to calin@php9.com for details.
+
+By using or copying this Software, Licensee agrees to abide by the copyright law and all other applicable laws of Germany, USA and also international copyright laws including, but not limited to, export control laws, and the terms of this licence. The Author shall have the right to terminate this licence immediately by written notice upon Licensee's breach of, or non-compliance with, any of its terms. Licensee may be held legally responsible for any copyright infringement that is caused or encouraged by Licensee's failure to abide by the terms of this licence. You are given this license on a temporary basis, this implies that this license can cease to be valid anytime at the sole discretion of the author. Please contact the author periodically to ensure that you are legally allowed to use this software.
+
+Licensee is not allowed to distribute the binary and source code (if released) to third parties. Licensee is not allowed to reverse engineer, disassemble or decompile code, or make any modifications of the binary or source code, remove or alter any trademark, logo, copyright or other proprietary notices, legends, symbols, or labels in the Software. Therefore if you are using this code, you agree to leave the footer copyright issue untouched.
+
+Licensee is not allowed to sub-license the Software or any derivative work based on or derived from the Software. 
+
+-----------------------
+
+Disclaimer:
+
+The Licensee acknowledges and agrees that the software is delivered 'as is' without warranty and without any support services (unless agreed otherwise with the Author). the Author make no warranties, either expressed or implied, as to the software and its derivatives. This code is provided 'as is', without any guarantee that it works. You are solely responsible for using this code and any implications it may have over your environment. The Author cannot be made responsible for any possible damage caused by using this software.
+
+As the code uses a live XML feed over Amazon.com, the Author will not be made responsible if eventual original server downtimes bring down your site or site's search. You should carefully investigate caching procedures that allow you to outcome eventual data source downtimes.
+
+Thank you for reading this and using this package!
+
+Calin Uioreanu
+04.10.2002 München
+Germany

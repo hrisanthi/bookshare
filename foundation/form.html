@@ -17,30 +17,42 @@
 
     <h1 id="font">UNC BookShare</h1>
     
-    <form name='SearchTerms' action=SimpleStore.php method='GET'>
-      <tr><td valign='top'>
-        <b>Choose a Category</b><br>
-          <select name='SearchIndex'>
-            <option value='Books'>Books</option>
-            <option value='DVD'>DVD</option>
-            <option value='Music'>Music</option>
-          </select>
-      </td></tr>
-      <tr><td><b>Enter Keywords</b><br><input type='text' name='Keywords' size='40'/></td></tr>
-      <input type='hidden' name='Action' value='Search'>
-      <input type='hidden' name='CartId' value=$CartId>
-      <input type='hidden' name='HMAC' value=$HMAC>
-      <tr align='center'><td><input type='submit'/></td></tr>
-      
-      <div id="camera">
-        <div class="camera-control" onclick="capturePhoto();">camera</div>
-      </div>
-      
-              <div class="barcode" onclick="barcode();"><i class="foundation-photo">barcode</div>
-              hey
-
-      </form>
-
+<style>
+        div[data-role=content] img {
+        	max-width: 200px;
+        }
+        </style>        
+    </head>
+    <body>
+ 
+    	<div data-role="page" id="home">
+ 
+    		<div data-role="header" data-position="fixed">
+    			<a href="#addNote" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Add</a>
+    			<h1>Notebook</h1>
+    		</div>
+ 
+    		<div data-role="content">
+    		</div>
+ 
+ 
+    	</div>
+ 
+    	<div data-role="page" id="addNote">
+ 
+    		<div data-role="header">
+    			<a href="#home" data-icon="home" data-iconpos="notext">Home</a>
+    			<h1>Notebook</h1>
+    		</div>
+ 
+    		<div data-role="content">
+		        <h2>Add Note</h2>
+		        <textarea id="noteText"></textarea>
+		        <button id="takePicBtn">Add Pic</button>
+		        <button id="saveNoteBtn">Save</button>
+    		</div>
+ 
+    	</div>
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>

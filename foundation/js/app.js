@@ -76,7 +76,7 @@ function getList(UNCBookShare){
     
 }
 
-$(document).on("pageshow", "#home", function(e, ui) {
+/*$(document).on("pageshow", "#home", function(e, ui) {
   $.mobile.loading("show");
  
 	var query = new Parse.Query(NoteOb);
@@ -120,7 +120,7 @@ $(document).on("pageshow", "#addNote", function(e, ui) {
 		/*
 		A bit complex - we have to handle an optional pic save
 		*/
-		if(imagedata != "") {
+		/*if(imagedata != "") {
 			var parseFile = new Parse.File("mypic.jpg", {base64:imagedata});
 			console.log(parseFile);
 				parseFile.save().then(function() {
@@ -182,7 +182,7 @@ $(document).on("pageshow", "#addNote", function(e, ui) {
 	}
  
 });
-
+*/
 
 
 

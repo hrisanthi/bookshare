@@ -1,14 +1,18 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    //code
-}
+    setUp();
+};
 
+$(document).ready(function(){
+    setUp();
+});
 
 var htmlBuilder;
 
-$(document).ready(function(){
+function setUp() {
     
+    emailStuff();
     var parseAPPID="zK8NuhYO40bSVrNzFs8yEJjyvu10JqISWX4ExHQg";
     var parseJSID="8PIiPYg1TWQASIr4Onnz1ofBRqJ5rPFURdPO5aEI"
     
@@ -46,7 +50,25 @@ $(document).ready(function(){
 
     
 });
+    
+}
+
+
+function emailStuff(){
+    
+    window.plugin.email.isServiceAvailable(
+    function (isAvailable) {
+        // alert('Service is not available') unless isAvailable;
+        window.plugin.email.open({
+    to:      null,
+    cc:      null,
+    bcc:     null,
+    subject: null,
+    body:    null,
 });
+    }
+);
+}
 
 
 function getList(UNCBookShare){
@@ -56,14 +78,15 @@ function getList(UNCBookShare){
         success: function(results) {
             console.log(results);
             $.each(results, function( index, value ) {
-            console.log(results[index].attributes.cost);
-            htmlBuilder += + '<td>'+'<img src=".//img/bookx.jpg"/>' +'</td>'+
+            console.log(results[index].attributes);
+            htmlBuilder += '<td>'+'<img src=".//img/bookx.jpg"/>' +'</td>'+
             '<td>'+ '<h5>'+ results[index].attributes.name + '</h5>' + '</td>' +
             '<td>'+ '<p>'+ results[index].attributes.title +'</p>' + '</td>'+
             '<td>'+ '<p>'+ results[index].attributes.department +'</p>' +'</td>'+
             '<td>'+ '<p>'+ results[index].attributes.classNumber +'</p>'+'</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'+
-});
+            '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'
+            });
+            
             $("#books").html(htmlBuilder);
         },
         

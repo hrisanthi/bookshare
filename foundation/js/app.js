@@ -63,10 +63,9 @@ function emailStuff(){
         // alert('Service is not available') unless isAvailable;
         window.plugin.email.open({
         to:      ["#email"],
-        cc:      null,
-        bcc:     null,
-        subject: null,
-        body:    null,
+        cc:      Array,
+        subject: String,
+        body:    String,
 });
     }
 );
@@ -81,13 +80,13 @@ function getList(UNCBookShare){
             console.log(results);
             $.each(results, function( index, value ) {
             console.log(results[index].attributes);
-            htmlBuilder += '<td>'+'<img src=".//img/bookx.jpg"/>' +'</td>'+
-            '<td>'+ '<h5>'+ results[index].attributes.name + '</h5>' + '</td>' +
-            '<td>'+ '<p>'+ results[index].attributes.title +'</p>' + '</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.department +'</p>' +'</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.classNumber +'</p>'+'</td>'+
-            '<td>'+ '<p>'+ results[index].attributes.classTitle+'</p>'+'</td>'+
-            '<td>' + '<p>'+results[index].attributes.email + '</p>'+'</td>'
+            htmlBuilder +='<tr>'+'<td>'+'<img src=".//img/bookx.jpg"/>' +
+            '<h5>'+ results[index].attributes.name + '</h5>' + 
+            '<p>'+ results[index].attributes.title +'</p>' + 
+            '<p>'+ results[index].attributes.department +'</p>' +
+            '<p>'+ results[index].attributes.classNumber +'</p>'+
+            '<p>'+ results[index].attributes.classTitle+'</p>'
+            '<p>'+results[index].attributes.email + '</p>'+'</td>'+'</tr>'
             });
             
             $("#books").html(htmlBuilder);

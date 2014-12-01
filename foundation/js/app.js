@@ -5,7 +5,7 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    setUp();
+    //setUp();
     search();
     
 });
@@ -131,7 +131,7 @@ function getList(UNCBookShare){
             
             '<p><button value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
            
-            '<p>'+results[index].attributes.email + '</p>'+'</td>'+'</tr>'
+            '</td>'+'</tr>'
                
                                 
                                 

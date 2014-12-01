@@ -1,65 +1,14 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
+
 function onDeviceReady() {
-    //setUp();
-};
-
-$(document).ready(function(){
-    setUp();
     search();
-    
-});
-
-var htmlBuilder;
-var emailAddress;
-
-function setUp() {
-    
-    console.log("setUp")
-    var parseAPPID="zK8NuhYO40bSVrNzFs8yEJjyvu10JqISWX4ExHQg";
-    var parseJSID="8PIiPYg1TWQASIr4Onnz1ofBRqJ5rPFURdPO5aEI"
-    
-    Parse.initialize(parseAPPID, parseJSID);
-    
-    var UNCBookShare = Parse.Object.extend("UNCBookShare");
-    var htmlBuilder = [];
-    
-    getList(UNCBookShare);
-    $("#addBook").on("submit", function(e){
-    e.preventDefault();
-    
-    console.log("Submit");
-    
-    var data={};
-    data.email=$("#email").val();
-    data.name=$("#name").val();
-    data.bookTitle=$("#bookTitle").val();
-    data.classTitle=$("#classTitle").val();
-    data.classNumber=parseInt($("#classNumber").val());
-    data.department=$("#department").val();
-
-    
-    var book = new UNCBookShare();
-    console.log(data);
-    book.save(data,{
-        success:function(data){
-            console.log("Success")
-            //alert("Thanks");
-        },
-        error:function(e){
-            console.dir(e);
-        }
-    });
-
-
-    
-});
+    emailStuff();
+    getList();
     
 }
-
-
-
-function search() {
+    
+    function search() {
 console.log("search")
     var index={};
     index.classId=$("#classId").val();
@@ -81,7 +30,7 @@ console.log("search")
 }
 
 
-/*function emailStuff(emailAddress){
+function emailStuff(emailAddress){
  console.log("email")
  
  
@@ -147,11 +96,4 @@ function getList(UNCBookShare){
         }
         
     });
-    
-    
-}*/
-
-
-
-
-
+}

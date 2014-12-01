@@ -1,26 +1,36 @@
 $(document).ready(function(){
-    //setUp();
-    search();
-    emailStuff();
-    getList(UNCBookShare);
+    initialize();
     
+     
     
-    
+   
 });
-  
 
 
+var htmlBuilder;
+var emailAddress;
 
+function initialize() {
+
+
+    var parseAPPID="zK8NuhYO40bSVrNzFs8yEJjyvu10JqISWX4ExHQg";
+    var parseJSID="8PIiPYg1TWQASIr4Onnz1ofBRqJ5rPFURdPO5aEI"
     
+    Parse.initialize(parseAPPID, parseJSID);
+    
+    var UNCBookShare = Parse.Object.extend("UNCBookShare");
+    var htmlBuilder = [];
+    getList(UNCBookShare);
+} 
+
     function search() {
             console.log("search")
     var index={};
     index.classId=$("#classId").val();
     index.bookId=$("#bookId").val();
-    
-    
-    
+
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
+    console.log(UNCBookShare);
     var query = new Parse.Query(UNCBookShare);
         query.get(index, {
           success: function(UNCBookShare) {
@@ -31,13 +41,12 @@ $(document).ready(function(){
     // error is a Parse.Error with an error code and message.
   }
 });
+        
 }
-
 
 function emailStuff(emailAddress){
  console.log("email")
- 
- 
+
  console.log(emailAddress);
     window.plugin.email.isServiceAvailable(
     function (isAvailable) {
@@ -62,20 +71,20 @@ function getList(UNCBookShare){
             $.each(results, function( index, value ) {
             console.log(results[index].attributes);
             var x = results[index].attributes.email;
-            console.log(x);
+            var imageObject;
+            imageObject= results[index].attributes.pic;
+            //console.log(imageObject);
             
-			//$.mobile.loading("hide");
-			var pic = "";
-			for(var i=0; i<results.length; i++) {
-				//Lame - should be using a template
-				
-				var pic = results[i].get("picture");
-				if(pic) {
-					s += "<br/><img src='" + pic.url() + "'>";
-				}
-				pic += "</p>";
+            if (imageObject != undefined) {
+                console.log("Image Object length: " + imageObject);
+                var imageURL = imageObject._url;
+                imageURL = "<br/><img src='" + imageURL + "'></p>";
+            
+	    }	
+          
+			
                                 
-            htmlBuilder +='<tr>'+'<td>'+ pic +
+            htmlBuilder +='<tr>'+'<td>'+ imageURL +
             '<h5>'+ results[index].attributes.name + '</h5>' + 
             '<p>'+ results[index].attributes.bookTitle +'</p>' + 
             '<p>'+ results[index].attributes.classTitle +'</p>' +
@@ -88,7 +97,7 @@ function getList(UNCBookShare){
                
                                 
                                 
-			}
+			
             
              });
             
@@ -101,3 +110,4 @@ function getList(UNCBookShare){
         
     });
 }
+

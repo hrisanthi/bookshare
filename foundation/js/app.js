@@ -7,8 +7,8 @@ function onDeviceReady() {
 
 
 
-var htmlBuilder;
-var emailAddress;
+//var htmlBuilder;
+//var emailAddress;
 
 function setUp() {
     

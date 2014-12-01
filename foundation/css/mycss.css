@@ -67,7 +67,7 @@ a#add{
     
 }
 .button.small#add{
-    padding: 5px;
+    padding: 8px;
 }
 
 .button.small#back{
@@ -77,8 +77,11 @@ a#add{
 a#back{
     float: left;
     margin-top: 50px;
-    margin-right: 10px;
-    margin-left: 10px;
+    
+    
+img{
+    height: 200%;
+    max-width: 200%;
 }
 
 

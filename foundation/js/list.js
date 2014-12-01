@@ -1,12 +1,16 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-
-
-function onDeviceReady() {
+$(document).ready(function(){
+    //setUp();
     search();
     emailStuff();
     getList(UNCBookShare);
     
-}
+    
+    
+});
+  
+
+
+
     
     function search() {
             console.log("search")

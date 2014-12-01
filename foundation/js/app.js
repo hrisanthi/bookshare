@@ -1,14 +1,11 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    //setUp();
+    setUp();
 };
 
-$(document).ready(function(){
-    setUp();
-    search();
-    
-});
+
+
 
 var htmlBuilder;
 var emailAddress;
@@ -59,7 +56,7 @@ function setUp() {
 
 
 
-function search() {
+/*function search() {
 console.log("search")
     var index={};
     index.classId=$("#classId").val();
@@ -81,7 +78,7 @@ console.log("search")
 }
 
 
-/*function emailStuff(emailAddress){
+function emailStuff(emailAddress){
  console.log("email")
  
  

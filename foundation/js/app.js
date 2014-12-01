@@ -24,7 +24,7 @@ function setUp() {
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var htmlBuilder = [];
     
-    getList(UNCBookShare);
+    //getList(UNCBookShare);
     $("#addBook").on("submit", function(e){
     e.preventDefault();
     

@@ -32,11 +32,11 @@ function setUp() {
     
     var data={};
     data.email=$("#email").val();
-    data.classTitle=$("#title").val();
     data.name=$("#name").val();
-    data.title=$("#classNumber").val();
-    data.department=$("#classTitle").val();
-    data.classNumber=$("#departmant").val();
+    data.bookTitle=$("#bookTitle").val();
+    data.classTitle=$("#classTitle").val();
+    data.classNumber=parseInt($("#classNumber").val());
+    data.department=$("#department").val();
 
     
     var book = new UNCBookShare();
@@ -124,7 +124,7 @@ function getList(UNCBookShare){
                                 
             htmlBuilder +='<tr>'+'<td>'+ pic +
             '<h5>'+ results[index].attributes.name + '</h5>' + 
-            '<p>'+ results[index].attributes.title +'</p>' + 
+            '<p>'+ results[index].attributes.bookTitle +'</p>' + 
             '<p>'+ results[index].attributes.classTitle +'</p>' +
             '<p>'+ results[index].attributes.classNumber +'</p>'+
             '<p>'+ results[index].attributes.department+'</p>'+

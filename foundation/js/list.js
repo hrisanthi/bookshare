@@ -4,12 +4,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     search();
     emailStuff();
-    getList();
+    getList(UNCBookShare);
     
 }
     
     function search() {
-console.log("search")
+            console.log("search")
     var index={};
     index.classId=$("#classId").val();
     index.bookId=$("#bookId").val();

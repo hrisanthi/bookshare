@@ -8,8 +8,8 @@ function uploadPhoto(data){
 // this is where you would send the image file to server
 
 
-    cameraPic.src = data;
-	//cameraPic.src = "data:image/jpeg;base64," + data;
+    //cameraPic.src = data;
+	cameraPic.src = "data:image/jpeg;base64," + data;
 	// Successful upload to the server
 	navigator.notification.alert(
 		'Your Photo has been uploaded',  // message

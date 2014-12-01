@@ -5,7 +5,7 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    //setUp();
+    setUp();
     search();
     
 });
@@ -56,6 +56,30 @@ function setUp() {
     
 }
 
+var query = new Parse.Query(UNCBookShare);
+	
+ 
+	query.find({
+		success:function(results) {
+			$.mobile.loading("hide");
+			var s = "";
+			for(var i=0; i<results.length; i++) {
+				//Lame - should be using a template
+				
+				var pic = results[i].get("picture");
+				if(pic) {
+					s += "<br/><img src='" + pic.url() + "'>";
+				}
+				s += "</p>";
+			}
+			$(".books div[data-role=content]").html(s);
+		},error:function(e) {
+			$.mobile.loading("hide");
+ 
+		}
+	});
+
+
 function search() {
 
     var index={};
@@ -66,7 +90,7 @@ function search() {
     
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var query = new Parse.Query(UNCBookShare);
-        query.get(classId, bookId, {
+        query.get(index, {
           success: function(UNCBookShare) {
     // The object was retrieved successfully.
   },

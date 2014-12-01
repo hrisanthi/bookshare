@@ -5,7 +5,7 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    //setUp();
+    setUp();
     search();
     
 });
@@ -44,7 +44,7 @@ function setUp() {
     book.save(data,{
         success:function(data){
             console.log("Success")
-            alert("Thanks");
+            //alert("Thanks");
         },
         error:function(e){
             console.dir(e);

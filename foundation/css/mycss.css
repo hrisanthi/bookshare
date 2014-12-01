@@ -21,7 +21,7 @@ body.books{
     width: 100%;
     height: 20px;
     background-color: white;
-    position: fixed;
+    position: relative;
 }
 
 h1#index{

@@ -5,8 +5,7 @@ function onDeviceReady() {
 };
 
 $(document).ready(function(){
-    setUp();
-    emailStuff();
+    //setUp();
     search();
     
 });
@@ -59,13 +58,15 @@ function setUp() {
 
 function search() {
 
-    var classId = "#classId";
-    var bookId = "#bookId";
+    var index={};
+    index.classId=$("#classId").val();
+    index.bookId=$("#bookId").val();
+    
     
     
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var query = new Parse.Query(UNCBookShare);
-        query.get(classId, {
+        query.get(classId, bookId, {
           success: function(UNCBookShare) {
     // The object was retrieved successfully.
   },
@@ -78,7 +79,7 @@ function search() {
 
 
 function emailStuff(){
-    
+ 
     window.plugin.email.isServiceAvailable(
     function (isAvailable) {
         // alert('Service is not available') unless isAvailable;

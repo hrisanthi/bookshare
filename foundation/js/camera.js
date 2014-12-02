@@ -1,25 +1,30 @@
-//contains code needed for camera plugin
-
-function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+	function capturePhoto(){
+        //alert("capture button working");
+    navigator.camera.getPicture(gotPic,failHandler,{quality:10, destinationType:0 });
 }   
 
-function uploadPhoto(data){
-// this is where you would send the image file to server
-
-
-    //cameraPic.src = data;
-	cameraPic.src = "data:image/jpeg;base64," + data;
-	// Successful upload to the server
-	navigator.notification.alert(
-		'Your Photo has been uploaded',  // message
-		okay,                           // callback
-	    'Photo Uploaded',              // title
-	    'OK'                          // buttonName
-	);
-
-}
-
-function okay(){
-	// Do something
-}
+function choosePhoto(){
+        //alert("capture button working");
+    navigator.camera.getPicture(gotPic,failHandler,{sourceType:0, destinationType:0, quality:10});
+}  
+ 
+	
+	function gotPic(data) {
+		console.log('got here');
+		imagedata = data;
+		cameraPic.src = "data:image/jpeg;base64," + data;
+		//$("#takePicBtn").text("Picture Taken!").button("refresh");
+	}
+	
+	function failHandler(e) {
+		alert("ErrorFromC");
+		alert(e);
+		console.log(e.toString());
+	}
+ 
+	function cleanUp() {
+		imagedata = "";
+		//$("#submitBtn").removeAttr("disabled").button("refresh");
+		$("#caption").val("");
+		//$("#takePicBtn").text("Add Pic").button("refresh");
+	}

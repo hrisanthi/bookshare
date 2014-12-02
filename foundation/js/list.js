@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    setUp();
     initialize();
     //choosePhoto();
     //okay();

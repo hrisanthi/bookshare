@@ -2,10 +2,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     setUp();
+    initialize();
 };
 
 $(document).ready(function(){
-    setUp();
+    //setUp();
 });
 
 

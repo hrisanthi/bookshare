@@ -18,18 +18,18 @@ body.books{
 }
 
 #ipod{
-    width: 100%;
+    width: 400px;;
     height: 20px;
     background-color: white;
-    position: relative;
+    position: fixed;
 }
 
 h1#index{
     font-family: 'Oleo Script';
     color: white;
     margin-left: 10px;
-    font-size: 30px;
-    margin-top: 20px;
+    font-size: 40px;
+    margin-top: 25px;
 
 }
 
@@ -37,7 +37,7 @@ h1#font{
     font-family: 'Oleo Script';
     color: #a7ddf9;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 label{

@@ -19,7 +19,11 @@ function initialize() {
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var htmlBuilder = [];
     getList(UNCBookShare);
-} 
+    
+    
+    
+}
+
 
     function search() {
             console.log("search")
@@ -82,13 +86,13 @@ function getList(UNCBookShare){
 	
                                 
             htmlBuilder +='<tr>'+'<td>' +
-            '<h5>'+ results[index].attributes.name + '</h5>' + 
+            '<h3>' + results[index].attributes.name +' </h3>' + 
             '<p>'+ results[index].attributes.bookTitle +'</p>' + 
             '<p>'+ results[index].attributes.classTitle +'</p>' +
             '<p>'+ results[index].attributes.classNumber +'</p>'+
             '<p>'+ results[index].attributes.department+'</p>'+
             
-            '<button value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
+            '<button class ="button expand" value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
            
             '</td>'+'</tr>'
                

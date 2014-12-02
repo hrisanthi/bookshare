@@ -1,10 +1,6 @@
 $(document).ready(function(){
     initialize();
-    //choosePhoto();
-    //okay();
-    
-     
-    
+ 
    
 });
 
@@ -85,7 +81,7 @@ function getList(UNCBookShare){
 	    }*/
 	
                                 
-            htmlBuilder +='<tr>'+'<td>'+ imageURL +
+            htmlBuilder +='<tr>'+'<td>' +
             '<h5>'+ results[index].attributes.name + '</h5>' + 
             '<p>'+ results[index].attributes.bookTitle +'</p>' + 
             '<p>'+ results[index].attributes.classTitle +'</p>' +

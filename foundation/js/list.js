@@ -22,6 +22,8 @@ function initialize() {
     
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var htmlBuilder = [];
+    
+    
     getList(UNCBookShare);
 } 
 
@@ -99,7 +101,7 @@ function getList(UNCBookShare){
             '<p>'+ results[index].attributes.classNumber +'</p>'+
             '<p>'+ results[index].attributes.department+'</p>'+
             
-            '<button value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
+            '<button class= "button expand" value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
            
             '</td>'+'</tr>'
                

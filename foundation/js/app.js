@@ -4,6 +4,9 @@ function onDeviceReady() {
     setUp();
 };
 
+$(document).ready(function(){
+    //setUp();
+});
 
 
 

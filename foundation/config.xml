@@ -4,7 +4,7 @@
 		id        = "com.yourdomainname.com"
 		versionCode="1"
 		version   = "1">
-		<name>App Title</name>
+		<name>UNC Bookshare</name>
 		<description>
                     App Description in 1-2 sentences
 		</description>

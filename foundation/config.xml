@@ -82,6 +82,6 @@
 		<icon src="img/Icon.png" gap:platform="android" gap:density="xxhdpi" />
 		<icon src="img/Icon.png" gap:platform="android" gap:density="xxxhdpi" />
 		<icon src="img/Icon.png" />
-		<gap:splash src="splash.png" />
+		<gap:splash src="img/splash.png" />
 		
 	</widget>

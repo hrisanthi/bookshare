@@ -1,7 +1,7 @@
 $(document).ready(function(){
     initialize();
-    choosePhoto();
-    okay();
+    //choosePhoto();
+    //okay();
     
      
     
@@ -73,7 +73,7 @@ function getList(UNCBookShare){
             $.each(results, function( index, value ) {
             console.log(results[index].attributes);
             var x = results[index].attributes.email;
-            var imageObject;
+            /*var imageObject;
             imageObject= results[index].attributes.pic;
             //console.log(imageObject);
             
@@ -82,7 +82,7 @@ function getList(UNCBookShare){
                 var imageURL = imageObject._url;
                 imageURL = "<br/><img src='" + imageURL + "'></p>";
             
-	    }
+	    }*/
 	
                                 
             htmlBuilder +='<tr>'+'<td>'+ imageURL +
@@ -111,38 +111,4 @@ function getList(UNCBookShare){
         
     });
     
-    function choosePhoto(){
-        //alert("capture button working");
-    navigator.camera.getPicture(gotPic,failHandler,{sourceType:0, destinationType:0, quality:10});
-}  
- 
-	
-	function gotPic(data) {
-		console.log('got here');
-		imagedata = data;
-		cameraPic.src = "data:image/jpeg;base64," + data;
-		//$("#takePicBtn").text("Picture Taken!").button("refresh");
-	}
-	
-	function failHandler(e) {
-		alert("ErrorFromC");
-		alert(e);
-		console.log(e.toString());
-	}
- 
-	function cleanUp() {
-		imagedata = "";
-		//$("#submitBtn").removeAttr("disabled").button("refresh");
-		$("#caption").val("");
-		//$("#takePicBtn").text("Add Pic").button("refresh");
-	}
- 
-//});
-
- 
-
-
-function okay(message) {
 }
-}
-

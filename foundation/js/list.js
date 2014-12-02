@@ -80,7 +80,20 @@ function getList(UNCBookShare){
                 var imageURL = imageObject._url;
                 imageURL = "<br/><img src='" + imageURL + "'></p>";
             
-	    }	
+	    }
+            
+            $("#takePicBtn").on("click", function(e) {
+		e.preventDefault();
+		navigator.camera.getPicture(gotPic, failHandler, 
+			{quality:50, destinationType:navigator.camera.DestinationType.DATA_URL,
+			 sourceType:navigator.camera.PictureSourceType.PHOTOLIBRARY});
+	});
+	
+	function gotPic(data) {
+		console.log('got here');
+		imagedata = data;
+		$("#takePicBtn").text("Picture Taken!").button("refresh");
+	}
           
 			
                                 

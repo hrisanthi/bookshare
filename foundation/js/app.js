@@ -2,7 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     setUp();
-    initialize();
+    //initialize();
 };
 
 $(document).ready(function(){

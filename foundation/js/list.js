@@ -1,6 +1,10 @@
 $(document).ready(function(){
     initialize();
- 
+    //choosePhoto();
+    //okay();
+    
+     
+    
    
 });
 
@@ -19,17 +23,17 @@ function initialize() {
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     var htmlBuilder = [];
     getList(UNCBookShare);
-    
-    
-    
-}
-
+} 
 
     function search() {
             console.log("search")
+            
     var index={};
     index.classId=$("#classId").val();
     index.bookId=$("#bookId").val();
+    console.log(index);
+    
+
 
     var UNCBookShare = Parse.Object.extend("UNCBookShare");
     console.log(UNCBookShare);
@@ -43,8 +47,11 @@ function initialize() {
     // error is a Parse.Error with an error code and message.
   }
 });
+    
+    }
         
-}
+
+    
 
 function emailStuff(emailAddress){
  console.log("email")
@@ -86,13 +93,13 @@ function getList(UNCBookShare){
 	
                                 
             htmlBuilder +='<tr>'+'<td>' +
-            '<h3>' + results[index].attributes.name +' </h3>' + 
+            '<h5>'+ results[index].attributes.name + '</h5>' + 
             '<p>'+ results[index].attributes.bookTitle +'</p>' + 
             '<p>'+ results[index].attributes.classTitle +'</p>' +
             '<p>'+ results[index].attributes.classNumber +'</p>'+
             '<p>'+ results[index].attributes.department+'</p>'+
             
-            '<button class ="button expand" value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
+            '<button value="Email" onclick="emailStuff(\''+ x + '\');">Email</button>' +
            
             '</td>'+'</tr>'
                

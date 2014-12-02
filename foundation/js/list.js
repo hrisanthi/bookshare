@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    setUp();
+    //setUp();
     initialize();
     //choosePhoto();
     //okay();

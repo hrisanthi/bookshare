@@ -1,7 +1,4 @@
-	function capturePhoto(){
-        //alert("capture button working");
-    navigator.camera.getPicture(gotPic,failHandler,{quality:10, destinationType:0 });
-}   
+
 
 function choosePhoto(){
         //alert("capture button working");
@@ -25,6 +22,10 @@ function choosePhoto(){
 	function cleanUp() {
 		imagedata = "";
 		//$("#submitBtn").removeAttr("disabled").button("refresh");
-		$("#caption").val("");
+		//$("#caption").val("");
 		//$("#takePicBtn").text("Add Pic").button("refresh");
 	}
+	
+	function okay(){
+	// Do something
+}
